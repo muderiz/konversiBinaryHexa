@@ -20,7 +20,7 @@ class Looping {
         for (int i = b; i < 0; i++) {
             jumlah = c * d;
         }
-        System.out.println("UBAHAHHAHA");
+        System.out.println("UBAHAHHAHANEEEHHH");
         return jumlah;
         
         
