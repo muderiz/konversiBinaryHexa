@@ -11,5 +11,6 @@ public class Fungsi {
         int N2 = masuk.nextInt();
         int hasil = N1 * N2;
         System.out.print("hasil total=" + hasil);
+        System.out.println("sukses");
     }
 }
