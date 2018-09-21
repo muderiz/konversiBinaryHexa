@@ -2,9 +2,9 @@
 public class KonversiHexaDecimal {
 
     /**
+     * Deka
      * Konversi Hexadecimal to Decimal
-     *
-     * @param hex untuk program akan mengembalikan nilai integer.
+     * @param hex untuk menentukan maksimal panjang karakter.
      * @return nilaidesimal untuk menampilkan nilai desimal, ch - '0' untuk -
      * mengembalikan nilai desimal untuk hex character. Character dapat sebagai
      * uppercase ataupun lowercase.
@@ -105,9 +105,45 @@ public class KonversiHexaDecimal {
     }
 
     /**
+     *
+     * @param OctalNumber
+     * @return
+     */
+    public int convert2Octal(int OctalNumber) {
+        int counter = 0;
+        int result = 0;
+        while (OctalNumber != 0) {
+            int temp = (int) ((OctalNumber % 8) * Math.pow(10, counter));
+            counter++;
+            result += temp;
+            OctalNumber /= 8;
+        }
+        return result;
+    }
+
+    /**
+     * Konversi Hexa to Decimal
+     *
+     * @param s untuk mengisi data hexa
+     * @return mengembalikan value decimal
+     */
+    public int hex2decimal(String s) {
+        String digits = "";
+        s = s.toUpperCase();
+        int val = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            int d = digits.indexOf(c);
+            val = 16 * val + d;
+        }
+        return val;
+    }
+
+    /**
      * Konversi dari Binary ke Hexadecimal
+     *
      * @param number berisi bilangan yang akan di konversikan
-     * @return mengembalikan nilai hexa 
+     * @return mengembalikan nilai hexa
      */
     public String BinaryToHexadecimal(String number) {
         String hexa = "";
@@ -122,8 +158,10 @@ public class KonversiHexaDecimal {
         }
         return hexa;
     }
+
     /**
      * Konversi Biner ke Decimal
+     *
      * @param number Isi dari Bilangan Biner
      * @return Mengembalikan hasil konversi biner ke decimal
      */
@@ -141,8 +179,11 @@ public class KonversiHexaDecimal {
         }
         return decimal;
     }
+
     /**
-     * Untuk kondisi apakah Bilangan yang di input merupakan bilangan Biner/Binary
+     * Untuk kondisi apakah Bilangan yang di input merupakan bilangan
+     * Biner/Binary
+     *
      * @param number berisi bilangan yang di input
      * @return mengembalikan data biner
      */
@@ -207,4 +248,6 @@ public class KonversiHexaDecimal {
         return angkaoctal;
     }
 
+    
+    
 }

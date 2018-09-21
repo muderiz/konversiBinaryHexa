@@ -27,6 +27,14 @@ class Looping {
         System.out.println("Binary of " + hex + ":" + result);
         
         /**
+         * Untuk Memanggil Fungsi Hexadecimal to Octal
+         */
+        System.out.println("\n-- Hexadecimal to Octal --");
+        System.out.print("Masukkan Bilangan Hexadesimal: ");
+        String octal = input.nextLine();
+        System.out.println("Nilai desimal untuk angka Octal " + octal + " adalah " + hexa.hex2decimal(octal.toUpperCase()));
+ 
+        /**
          * Untuk Memanggil Fungsi Binary to Hexadecimal
          */
         System.out.println("\n-- Binary to Hexa --");
@@ -53,4 +61,5 @@ class Looping {
         
         
     }
+ 
 }
